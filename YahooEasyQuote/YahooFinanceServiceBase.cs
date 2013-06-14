@@ -1,0 +1,75 @@
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="YahooFinanceServiceBase.cs" company="http://tufnelltech.blogspot.co.uk/">
+//   Copyright (c) 2013 Matt Laver
+// </copyright>
+// <license>
+//   The MIT License (MIT)
+//
+//   Permission is hereby granted, free of charge, to any person obtaining a copy
+//   of this software and associated documentation files (the "Software"), to deal
+//   in the Software without restriction, including without limitation the rights
+//   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//   copies of the Software, and to permit persons to whom the Software is
+//   furnished to do so, subject to the following conditions:
+//
+//   The above copyright notice and this permission notice shall be included in
+//   all copies or substantial portions of the Software.
+//
+//   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//   THE SOFTWARE.
+// </license>
+// --------------------------------------------------------------------------------------------------------------------
+namespace YahooEasyQuote
+{
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// The YahooFinAnceServiceBase
+    /// </summary>
+    public abstract class YahooFinanceServiceBase : IYahooFinanceService
+    {
+        /// <summary>
+        /// The _http web service.
+        /// </summary>
+		private IHttpWebService _httpWebService;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="YahooEasyQuote.YahooFinanceServiceBase"/> class.
+        /// </summary>
+        /// <param name="httpWebService">Http web service.</param>
+        public YahooFinanceServiceBase(IHttpWebService httpWebService)
+        {
+            this._httpWebService = httpWebService;
+        }
+
+        /// <summary>
+        /// Gets the request.
+        /// </summary>
+        /// <returns>The request.</returns>
+        /// <param name="symbol">Symbol string</param>
+        public abstract StockQuote GetQuote(string symbol);
+
+        /// <summary>
+        /// Gets a collection of stock quotes.
+        /// </summary>
+        /// <returns>The request.</returns>
+        /// <param name="symbols">Symbols array</param>
+        public abstract IEnumerable<StockQuote> GetQuotes(string[] symbols);
+
+        /// <summary>
+        /// Gets the http request.
+        /// </summary>
+        /// <returns>The http request.</returns>
+        /// <param name="request">Request string</param>
+        protected string GetHttpRequest(string request)
+        {
+            return this._httpWebService.GetHttpRequest(request);
+        }
+    }
+}
