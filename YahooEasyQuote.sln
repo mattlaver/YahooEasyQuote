@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YahooEasyQuote", "YahooEasy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YahooEasyQuoteTests", "YahooEasyQuoteTests\YahooEasyQuoteTests.csproj", "{1309B730-A68B-4BC2-814B-9C9572033ABF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleExample", "SimpleExample\SimpleExample.csproj", "{299BF8CC-722F-48C5-9829-65EC76EF6287}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,12 +17,16 @@ Global
 		{1309B730-A68B-4BC2-814B-9C9572033ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1309B730-A68B-4BC2-814B-9C9572033ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1309B730-A68B-4BC2-814B-9C9572033ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{299BF8CC-722F-48C5-9829-65EC76EF6287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{299BF8CC-722F-48C5-9829-65EC76EF6287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{299BF8CC-722F-48C5-9829-65EC76EF6287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{299BF8CC-722F-48C5-9829-65EC76EF6287}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3713FCAB-14F4-4C8D-873C-D84846786E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3713FCAB-14F4-4C8D-873C-D84846786E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3713FCAB-14F4-4C8D-873C-D84846786E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3713FCAB-14F4-4C8D-873C-D84846786E68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = YahooEasyQuoteTests\YahooEasyQuoteTests.csproj
+		StartupItem = SimpleExample\SimpleExample.csproj
 	EndGlobalSection
 EndGlobal

@@ -32,7 +32,7 @@ namespace YahooEasyQuote
     /// <summary>
     /// Yahoo easy quote library
     /// </summary>
-    public class YahooEasyQuote
+    public class YahooQuote
     {
         /// <summary>
         /// The _yahoo finance.
@@ -42,7 +42,7 @@ namespace YahooEasyQuote
         /// <summary>
         /// Initializes a new instance of the <see cref="YahooEasyQuote.YahooEasyQuote"/> class.
         /// </summary>
-        public YahooEasyQuote()
+        public YahooQuote()
         {
             this._yahooFinanceService = new YahooFinanceServiceCsv(new HttpWebService());
         }
